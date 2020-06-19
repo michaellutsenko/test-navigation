@@ -1,0 +1,41 @@
+.container {
+  position: absolute;
+
+  width: 100vw;
+  height: 100vh;
+
+  padding: 10vw;
+  box-sizing: border-box;
+
+  border: none;
+  border-radius: 48px 0 0;
+  background-color: white;
+
+  transition: all .2s ease-in-out;
+}
+
+.container:global(.shifted) {
+  margin-left: 70vw;
+  transform: rotate(-7deg);
+  transition: all .2s ease-in-out;
+}
+
+.header {
+  vertical-align: middle;
+}
+
+.burgerIcon {
+  color: #E8E5E5;
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.caption {
+  color: #9F9FA0;
+  font-family: 'Avenir Medium', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 5px;
+  line-height: 33px;
+  text-transform: uppercase;
+}

@@ -1,0 +1,25 @@
+.container {
+  position: relative;
+
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.backdrop {
+  position: absolute;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: #1F1B33;
+
+  /* I'm cheating here a little. This will get rid of the annoying
+  thin line but it will be virtually unnoticeable to the eye.
+  There may be a better solution, but this is quite literally the
+  case of the best being the enemy of the good */
+  border-radius: 50px 0 0;
+}

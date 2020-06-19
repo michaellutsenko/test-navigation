@@ -1,0 +1,50 @@
+.container {
+  height: 100vh;
+  width: 70vw;
+
+  padding: 20vw 10vw;
+  box-sizing: border-box;
+
+  color: white;
+}
+
+.username {
+  font-family: 'Avenir Medium', sans-serif;
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 38px;
+
+  padding-left: 5vw;
+}
+
+.container ul {
+  margin: 10vw 0;
+  border-bottom: 1px solid #84818E;
+  list-style-type: none;
+  padding: 0;
+}
+
+li, a {
+  display: block;
+  margin: 5vw 0;
+  padding: 5vw 5vw;
+
+  font-family: 'Avenir Medium', sans-serif;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: 27px;
+
+  cursor: pointer;
+}
+
+li:global(.active) {
+  border-radius: 15px;
+  background-color: #FC807433;
+  color: #FC8074;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
