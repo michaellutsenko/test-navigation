@@ -21,6 +21,7 @@ const Navigation = ({ currentRoute, onNavigate }) => {
         {routes.map((route, index) => (
           <li
             key={index}
+            // Add the "active" class if the route is active
             className={classnames({ active: route.id === currentRoute })}
             onClick={() => onNavigate(route.id)}
           >

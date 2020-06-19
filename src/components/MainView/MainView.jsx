@@ -7,21 +7,28 @@ import Navigation from "../Navigation/Navigation";
 import styles from "./MainView.module.css";
 import routes from "../../routes";
 
+// The first thing you'll notice is that I have two separate state variables
+// for showing the navigation panel (main view shifted to the side) and
+// rendering the navigation block INSIDE the navigation panel.
+// This is basically for a smooth transition. Whenever the navigation panel
+// opens, I want the navigation block to already be in there. However, that
+// can cause a situation in which the block is removed from the DOM before
+// the panel closes. I want the block to unmount from the DOM AFTER the panel
+// is closed.
 const MainView = () => {
   // Using state hook to define whether the navigation panel is shown
   const [showNavigationPanel, setShowNavigationPanel] = useState(false);
 
-  // Using state hook to define whether the navigation block is shown
-  // on the navigation panel. This is for a visually smooth transition
+  // Using state hook to define whether the navigation block is rendered
   const [showNavigationBlock, setShowNavigationBlock] = useState(false);
 
   // Using state hook to emulate navigation between routes
   const [currentRoute, setCurrentRoute] = useState("start");
   const route = routes.find((x) => x.id === currentRoute);
 
-  // This function is to keep things DRY
+  // This function is here to keep things DRY
   const onNavigationOpen = () => {
-    // Render the navigation block (this will result in a complete lifecycle for navigation)
+    // Render the navigation block
     setShowNavigationBlock(true);
 
     // Show the navigation panel
